@@ -7,15 +7,19 @@
 myncurve(mu, sigma, a)
 }
 \arguments{
-\item{mu}{mean}
+\item{mu}{sample mean}
 
-\item{sigma}{standard deviation}
+\item{sigma}{sample standard deviation}
 
-\item{a}{a}
+\item{a}{upper limit}
 }
 \value{
-a plot of a normal distribution with
+a plot of a normal distribution with the area from negative infinity to a colored
 }
 \description{
 Title
+}
+\examples{
+myncurve(mu = 10, sigma = 5, a = 6)
+
 }

@@ -9,15 +9,19 @@ mycltb(n, iter, p = 0.5, ...)
 \arguments{
 \item{n}{sample size}
 
-\item{iter}{iteratoins}
+\item{iter}{number of iterations}
 
 \item{p}{probability of success}
 
-\item{...}{...}
+\item{...}{any other parameters regarding the final graph}
 }
 \value{
 a histogram of the mean of the binomial distribution
 }
 \description{
 Title
+}
+\examples{
+mycltb(n = 20, iter = 10000, p = 0.7)
+
 }

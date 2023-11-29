@@ -1,0 +1,62 @@
+---
+title: "Description of the package"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Description of the package}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(MATH4753xwFA23)
+```
+
+# Introduction
+
+This package contains a few of the functions and datasets that were used throughout the MATH 4753 course. 
+
+## findz()
+
+This function takes a vector as an argument and finds the z-score of each value based on the mean and standard deviation of the data in the given vector. Using the fire dataset contained in the package, the function returns a vector containing all the z-scores.
+
+```{r}
+z <- findz(fire$DAMAGE)
+z
+```
+
+
+## mybin()
+
+This function simulates a binomial experiment with a given sample size and probability $0 \leq p \leq 1$ over a number of iterations, more iterations leading to a more accurate result. It returns a barplot representing the results of the experiment as well as a corresponding list of ratios for each value.
+
+```{r}
+mybin(iter = 1000, n = 20, p = 0.3)
+```
+
+## myci()
+
+This function constructs a 95% confidence interval for the population mean given a vector of the sample data. Using the fire data set, we are 95% confident that the population mean lies in the interval.
+
+```{r}
+myci(fire$DAMAGE)
+```
+
+
+## myncurve()
+
+This function calculates the lower tail probability of a normal distribution given the mean, standard deviation, and target value. It returns the result as well as a graph with the calculated area colored in orange.
+
+```{r}
+myncurve(mu = 6, sigma = 3, a = 1)
+```
+
+
+
+

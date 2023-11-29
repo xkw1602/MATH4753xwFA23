@@ -1,14 +1,20 @@
 #' Title
 #'
-#' @param mu mean
-#' @param sigma standard deviation
-#' @param a a
+#' @param mu sample mean
+#' @param sigma sample standard deviation
+#' @param a upper limit
 #'
-#' @return a plot of a normal distribution with 
+#' @importFrom graphics curve polygon
+#' @importFrom stats dnorm pnorm
+#'
+#' @return a plot of a normal distribution with the area from negative infinity to a colored
 #' @export myncurve
 #'
 #' @examples
+#' myncurve(mu = 10, sigma = 5, a = 6)
+#' 
 myncurve = function(mu, sigma, a){
+    x <- NULL
   curve(dnorm(x,mean=mu,sd=sigma), xlim = c(mu-3*sigma, mu + 3*sigma))
   xcurve = seq(-1000, a, length = 10000)
   ycurve = dnorm(xcurve, mu, sigma)

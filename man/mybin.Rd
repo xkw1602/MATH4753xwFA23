@@ -11,11 +11,15 @@ mybin(iter = 100, n = 10, p = 0.5)
 
 \item{n}{sample size}
 
-\item{p}{probability}
+\item{p}{probability of success}
 }
 \value{
 a barplot representing the distribution
 }
 \description{
 Title
+}
+\examples{
+mybin(iter = 10000, n = 30, p = 0.6)
+
 }

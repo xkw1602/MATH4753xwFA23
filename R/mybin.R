@@ -2,16 +2,22 @@
 #'
 #' @param iter number of iterations for sample selection
 #' @param n sample size
-#' @param p probability
+#' @param p probability of success
+#' 
+#' @importFrom grDevices rainbow
+#' @importFrom graphics barplot 
+#'
 #'
 #' @return a barplot representing the distribution
 #' @export
 #'
 #' @examples
+#' mybin(iter = 10000, n = 30, p = 0.6)
+#' 
 mybin=function(iter=100,n=10, p=0.5){
   # make a matrix to hold the samples
   #initially filled with NA's
-  sam.mat=matrix(NA,nr=n,nc=iter, byrow=TRUE)
+  sam.mat=matrix(NA,nrow=n,ncol=iter, byrow=TRUE)
   #Make a vector to hold the number of successes in each trial
   succ=c()
   for( i in 1:iter){

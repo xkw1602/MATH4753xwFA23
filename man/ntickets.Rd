@@ -14,8 +14,12 @@ ntickets(N, gamma, p)
 \item{p}{probability of a show}
 }
 \value{
-2 plots (discrete and continuous) and a list of variable values
+2 plots (discrete and continuous) representing the number of tickets and a list of variable values
 }
 \description{
 Title
+}
+\examples{
+ntickets(N = 400, gamma = 0.02, p = 0.95)
+
 }

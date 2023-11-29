@@ -4,10 +4,15 @@
 #' @param gamma probability a plane is indeed overbooked
 #' @param p probability of a show
 #'
-#' @return 2 plots (discrete and continuous) and a list of variable values
+#' @importFrom graphics abline curve layout
+#' @importFrom stats qbinom pbinom pnorm uniroot
+#'
+#' @return 2 plots (discrete and continuous) representing the number of tickets and a list of variable values
 #' @export
 #'
 #' @examples
+#' ntickets(N = 400, gamma = 0.02, p = 0.95)
+#' 
 ntickets <- function(N, gamma, p){
   
   # stores the objective function
